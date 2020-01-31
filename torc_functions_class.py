@@ -5,8 +5,8 @@ def scale_torcs(TorcValues,Params):
     for key,value in TorcValues.items():
         [xsiz, tsiz] = value.shape
         temp = value
-        if xSize != xsiz & tSize != tsiz:
-            temp1 = interpft(interpft(temp, xSize, 0), tSize, 1)
+        if Paramas['xSize'] != xsiz & Params['tSize'] != tsiz:
+            temp1 = interpft(interpft(temp, Params['xSize'], 0), Params['tSize'], 1)
 
             scl = np.max(np.abs([np.min(np.min(temp1)), np.max(np.max(temp1))]))
 
