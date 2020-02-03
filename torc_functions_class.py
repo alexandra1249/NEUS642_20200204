@@ -10,7 +10,7 @@ def scale_torcs(TorcValues,Params):
 
             scl = np.max(np.abs([np.min(np.min(temp1)), np.max(np.max(temp1))]))
 
-            temp2 = temp*ModulationDepth/scl
+            temp2 = temp*Params['mod_depth']/scl
         ScaledTorcs[key] = temp2
     return ScaledTorcs
 
